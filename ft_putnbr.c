@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   istype_s.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/23 11:29:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 16:13:33 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/10 18:42:52 by alaulom           #+#    #+#             */
+/*   Updated: 2016/02/23 18:14:14 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			istype_s(va_list ap)
+void		ft_putnbr(int nb)
 {
-	char*	str;
-
-	str = va_arg(ap, char*);
-	if (str == NULL)
+	if (nb < 0)
 	{
-		ft_putstr("null");
-		return (4);
+		ft_putchar('-');
+		ft_putnbr(-nb);
 	}
-	ft_putstr(str);
-	return (ft_strlen(str));
+	else if (nb < 10)
+		ft_putchar(nb + '0');
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putchar(nb % 10 + '0');
+	}
 }

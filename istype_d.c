@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 11:38:30 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 13:04:17 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/23 17:54:00 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "includes/ft_printf.h"
 
 int			istype_d(va_list ap)
 {
@@ -18,5 +18,5 @@ int			istype_d(va_list ap)
 
 	nb = va_arg(ap, int);
 	ft_putnbr(nb);
-return (intlen(ap));
+	return (intlen(nb));
 }

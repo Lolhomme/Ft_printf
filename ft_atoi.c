@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   istype_s.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/23 11:29:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 16:13:33 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/10 11:46:01 by alaulom           #+#    #+#             */
+/*   Updated: 2016/02/23 17:27:20 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			istype_s(va_list ap)
+int			ft_atoi(const char *str)
 {
-	char*	str;
+	int		ret;
+	char	sign;
 
-	str = va_arg(ap, char*);
-	if (str == NULL)
+	sign = 1;
+	ret = 0;
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		ft_putstr("null");
-		return (4);
+		sign = (*str == '-' ? -1 : 1);
+		str++;
 	}
-	ft_putstr(str);
-	return (ft_strlen(str));
+	while (ft_isdigit(*str))
+	{
+		ret = ret * 10 + sign * (*str - '0');
+		str++;
+	}
+	return (ret);
 }

@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   istype_s.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/23 11:29:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 16:13:33 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/05 14:23:20 by alaulom           #+#    #+#             */
+/*   Updated: 2016/02/23 18:14:48 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			istype_s(va_list ap)
+char	*ft_strdup(const char *s1)
 {
-	char*	str;
+	char	*dst;
 
-	str = va_arg(ap, char*);
-	if (str == NULL)
-	{
-		ft_putstr("null");
-		return (4);
-	}
-	ft_putstr(str);
-	return (ft_strlen(str));
+	dst = (char *)malloc(ft_strlen(s1) * sizeof(char) + sizeof(char));
+	if (!dst)
+		return (NULL);
+	return (ft_strcpy(dst, s1));
 }

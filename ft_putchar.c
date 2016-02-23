@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   istype_s.c                                         :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/23 11:29:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 16:13:33 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/10 14:40:25 by alaulom           #+#    #+#             */
+/*   Updated: 2016/02/23 17:29:56 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			istype_s(va_list ap)
+void		ft_putchar(char c)
 {
-	char*	str;
-
-	str = va_arg(ap, char*);
-	if (str == NULL)
-	{
-		ft_putstr("null");
-		return (4);
-	}
-	ft_putstr(str);
-	return (ft_strlen(str));
+	write(1, &c, 1);
 }

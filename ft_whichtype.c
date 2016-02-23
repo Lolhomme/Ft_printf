@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 17:46:53 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 11:37:32 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/23 17:47:59 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "includes/ft_printf.h"
 
 int			ft_whichtype( va_list ap, char c)
 {
@@ -25,4 +25,5 @@ int			ft_whichtype( va_list ap, char c)
 		ft_putchar('%');
 		return (1);
 	}
+	return (0);
 }

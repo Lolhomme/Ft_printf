@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 12:57:21 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 13:02:32 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/23 17:54:06 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_print.h"
+#include "includes/ft_printf.h"
 
 int			intlen(int nb)
 {
@@ -23,7 +23,7 @@ int			intlen(int nb)
 		return (1);
 	while (nb)
 	{
-		nb \= 10;
+		nb /= 10;
 		i++;
 	}
 	return ((nb < 0) ? i + 1 : i); 
