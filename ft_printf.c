@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/20 18:26:22 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/22 18:35:41 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/23 11:05:42 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int			ft_printf(const char* format, ...)
 	va_start(ap, format);
 	str = (char*)malloc(sizeof(char) * (ft_strlen(format) + 1));
 	str = ft_strcpy(format);
-	while (!*str)
+	while (*str != '\0')
 	{
 		if (*str != '%')
 		{
@@ -32,7 +32,7 @@ int			ft_printf(const char* format, ...)
 			cmp++;
 		}
 		else if (*str == '%')
-			cmp += ft_whichtype(str, i++, ap);
+			cmp += ft_whichtype(ap, str[i + 1]);
 		i++;
 	}
 	va_end(va_list ap);
