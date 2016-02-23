@@ -6,18 +6,18 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/20 18:26:22 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 17:47:01 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/23 18:36:50 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			ft_printf(const char* format, ...)
+int				ft_printf(const char *format, ...)
 {
-	va_list	ap;
-	int		i;
-	int		cmp;
-	char*	str;
+	va_list		ap;
+	int			i;
+	int			cmp;
+	char		*str;
 
 	i = 0;
 	cmp = 0;

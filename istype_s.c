@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 11:29:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 16:13:33 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/23 18:38:32 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int			istype_s(va_list ap)
 {
-	char*	str;
+	char	*str;
 
 	str = va_arg(ap, char*);
 	if (str == NULL)
