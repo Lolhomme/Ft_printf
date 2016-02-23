@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   istype_d.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/10 18:42:52 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/10 18:43:01 by alaulom          ###   ########.fr       */
+/*   Created: 2016/02/23 11:38:30 by alaulom           #+#    #+#             */
+/*   Updated: 2016/02/23 11:58:24 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void		ft_putnbr(int nb)
+int			istype_d(va_list ap)
 {
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		ft_putnbr(-nb);
-	}
-	else if (nb < 10)
-		ft_putchar(nb + '0');
-	else
-	{
-		ft_putnbr(nb / 10);
-		ft_putchar(nb % 10 + '0');
-	}
+	int		nb;
+
+	nb = va_arg(ap, int);
+	ft_putnbr(nb);
+return (
 }

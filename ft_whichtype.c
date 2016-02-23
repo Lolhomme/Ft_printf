@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 17:46:53 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 11:17:06 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/23 11:37:32 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int			ft_whichtype( va_list ap, char c)
 		return (istype_c(ap));
 	if (c == 's')
 		return (istype_s(ap));
+	if (c == 'd')
+		return (istype_d(ap));
 	if (c == '%')
 	{
 		ft_putchar('%');
