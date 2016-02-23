@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   istype_d.c                                         :+:      :+:    :+:   */
+/*   intlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/23 11:38:30 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 13:04:17 by alaulom          ###   ########.fr       */
+/*   Created: 2016/02/23 12:57:21 by alaulom           #+#    #+#             */
+/*   Updated: 2016/02/23 13:02:32 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_print.h"
 
-int			istype_d(va_list ap)
+int			intlen(int nb)
 {
-	int		nb;
+	int		i;
+	int		ret;
 
-	nb = va_arg(ap, int);
-	ft_putnbr(nb);
-return (intlen(ap));
+	i = 0;
+	ret = nb;
+	if (nb == 0)
+		return (1);
+	while (nb)
+	{
+		nb \= 10;
+		i++;
+	}
+	return ((nb < 0) ? i + 1 : i); 
 }
