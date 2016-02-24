@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/24 17:11:48 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/24 17:44:34 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,26 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-void	ft_putchar(char c);
-void	ft_putstr(const char *s);
-void	ft_putnbr(int nb);
-//int		ft_atoi(const char *str);
-char	*ft_itoa(int i);
-char	*ft_strdup(const char *s1);
-size_t	ft_strlen(const char *s);
-char	*ft_strcpy(char *dst, const char *src);
+typedef struct			s_env
+{
+	int					min;
+	int					zero;
+	int					sharp;
+	int					plus;
+	int					space;
+	int					size;
+	int					isprecision;
+	int					precision;
+	int					per_cent;
+	char		params;
+	int					result;
+	int					i;
+}						t_env;
+
+typedef struct			s_tab
+{
+	int					(*tab_ft_conv[126])(va_list ap, t_env *env);
+}						t_tab;
 
 int		ft_printf(const char *format, ...);
 int		ft_whichtype(va_list ap, char c);
