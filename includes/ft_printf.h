@@ -6,13 +6,14 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 18:47:38 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/24 17:11:48 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include "libft.h"
 # include "ft_printf.h"
 # include <stdarg.h>
 # include <unistd.h>
@@ -20,7 +21,7 @@
 # include <stdlib.h>
 
 void	ft_putchar(char c);
-void	ft_putstr(char *s);
+void	ft_putstr(const char *s);
 void	ft_putnbr(int nb);
 //int		ft_atoi(const char *str);
 char	*ft_itoa(int i);
