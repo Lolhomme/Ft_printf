@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 13:15:30 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/26 14:34:29 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/02/26 16:49:06 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int			ft_whichflags(char *format)
 	while (format[i])
 	{
 		if (format[i] == '#' || format[i] == '-' || format[i] == '+' ||
-			   	format[i] == ' ')
+				format[i] == ' ')
 			i += ft_options(format[i]);
 		else if (ft_isdigit(format[i]) && format[i - 1] != '.')
 			i += ft_width(&format[i]);
