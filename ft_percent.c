@@ -6,13 +6,13 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 16:15:13 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/11 16:46:52 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/13 16:06:21 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			ft_minus(int size, char c)
+static int			ft_minus(int size, char c)
 {
 	int		i;
 	
@@ -26,7 +26,7 @@ int			ft_minus(int size, char c)
 	return (i + 1);
 }
 
-int			ft_zero(int size, char c)
+static int			ft_zero(int size, char c)
 {
 	int		i;
 
@@ -40,7 +40,7 @@ int			ft_zero(int size, char c)
 	return (i + 1);
 }
 
-int			ft_space(int size, char c)
+static int			ft_space(int size, char c)
 {
 	int		i;
 

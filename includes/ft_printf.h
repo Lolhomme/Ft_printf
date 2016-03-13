@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/11 16:48:46 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/13 16:06:43 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct				s_env
 	int						size;
 	int						per_cent;
 	char		params;
+	char		*quest;
 	int						result;
 	int						i;
 }							t_env;
@@ -55,10 +56,12 @@ int		ft_width(char *s, t_env *env);
 int		ft_precision(char *s, , t_env *env);
 int		ft_size_options(char *s, t_env *env);
 int		ft_percent(va_list ap, t_env *env);
-int		ft_minus(int size, char c);
-int		ft_zero(int size, char c);
-int		ft_space(int size, char c);
-int		istype_c(va_list ap);
+static int		ft_minus(int size, char c);
+static int		ft_zero(int size, char c);
+static int		ft_space(int size, char c);
+int		istype_c(va_list ap, t_env *env);
+static int	ft_l_c(va_list ap, t_env *env);
+static char	ft_uchar(va_list ap);
 int		istype_d(va_list ap);
 int		istype_s(va_list ap);
 int		intlen(int nb);
