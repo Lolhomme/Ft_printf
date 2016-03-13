@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/20 18:26:22 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/26 16:55:18 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/13 17:32:06 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void			init_tab(t_tab **tab)
 
 int				ft_printf(const char *format, ...)
 {
-	va_list		api;
+	va_list		ap;
 	t_env		env;
 	t_tab		*tab;
 
