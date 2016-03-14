@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 13:57:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 14:00:15 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 16:06:28 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_l_s(va_list ap, t_env *env)
 	{
 		while (arg[i])
 		{
-			ft_printf_conv_unicode(arg[i], env);
+			ft_conv_unicode(arg[i], env);
 			if (i == 0 && env->quest)
 				env->world = ft_strdup(env->quest);
 			else

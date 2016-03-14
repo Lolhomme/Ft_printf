@@ -6,16 +6,18 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/14 13:06:41 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/14 16:18:20 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRC = ft_printf.c ft_percent.c istype_c.c ft_whichflags.c ft_init_flags.c \
-	ft_conv_unicode.c ft_print_c.c ft_print_char_c.c \
-OBJ = $(SRC:.c=.o)
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
+SRC  = ft_printf.c \
+	   ./sources/ft_percent.c ./sources/istype_c.c ./sources/ft_whichflags.c \
+	  ./sources/ft_init_flags.c ./sources/ft_conv_unicode.c \
+	  ./sources/ft_print_c.c ./sources/ft_print_char_c.c \
+OBJ  = $(SRC:.c=.o)
+CC   = gcc
+FLAGS= -Wall -Wextra -Werror
 
 all: $(NAME)
 
