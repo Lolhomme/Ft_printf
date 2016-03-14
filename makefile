@@ -6,14 +6,14 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/14 17:06:12 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/14 17:30:27 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRC  = ft_printf.c \
-	   ./sources/ft_percent.c ./sources/istype_c.c ./sources/ft_whichflags.c \
+	  ./sources/ft_percent.c ./sources/istype_c.c ./sources/ft_whichflags.c \
 	  ./sources/ft_init_flags.c ./sources/ft_conv_unicode.c \
 	  ./sources/ft_print_c.c ./sources/ft_print_char_c.c
 
