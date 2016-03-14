@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_percent.c                                       :+:      :+:    :+:   */
+/*   ft_print_char_c.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/11 16:15:13 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 11:55:16 by alaulom          ###   ########.fr       */
+/*   Created: 2016/03/14 11:57:17 by alaulom           #+#    #+#             */
+/*   Updated: 2016/03/14 12:15:03 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "includes/printf.h"
 
-static int			ft_minus(int size, char c)
+tatic int	ft_minus(int size, char c)
 {
-	int		i;
-	
+	int i;
+
 	i = 0;
 	ft_putchar(c);
 	while (i < (size - 1))
@@ -26,9 +26,9 @@ static int			ft_minus(int size, char c)
 	return (i + 1);
 }
 
-static int			ft_zero(int size, char c)
+static int	ft_zero(int size, char c)
 {
-	int		i;
+	int i;
 
 	i = 0;
 	while (i < (size - 1))
@@ -40,9 +40,9 @@ static int			ft_zero(int size, char c)
 	return (i + 1);
 }
 
-static int			ft_space(int size, char c)
+static int	ft_space(int size, char c)
 {
-	int		i;
+	int i;
 
 	i = 0;
 	while (i < (size - 1))
@@ -54,23 +54,22 @@ static int			ft_space(int size, char c)
 	return (i + 1);
 }
 
-int			ft_percent(va_list ap, t_env *env)
+int			ft_print_char_c(char arg, t_env *env)
 {
 	int		i;
 
 	i = 0;
 	if (env->size && !env->zero && !env->minus)
-		i = ft_space(env->size, env->params);
+		i = ft_space(arg, env);
 	else if (env->size && env->zero && !env->minus)
-		i = ft_zero(env->size, env->params);
-	else if (env->size && env->minus)
-		i = ft_minus(env->size, env->params);
+		i = ft_zero(arg, env);
+	else (env->size && env->minus)
+		i = ft_minus(arg, env);
 	else
 	{
 		i = 1;
-		ft_putchar(env->params);
+		ft_putchar(arg);
 	}
-	void (ap);
-	void (env);
+	void(env);
 	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/13 17:33:16 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 12:15:54 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,10 @@ int		ft_width(char *s, t_env *env);
 int		ft_precision(char *s, , t_env *env);
 int		ft_size_options(char *s, t_env *env);
 int		ft_percent(va_list ap, t_env *env);
-static int		ft_minus(int size, char c);
-static int		ft_zero(int size, char c);
-static int		ft_space(int size, char c);
 int		istype_c(va_list ap, t_env *env);
-static int	ft_l_c(va_list ap, t_env *env);
-static char	ft_uchar(va_list ap);
+void	ft_conv_unicode(wchar_t arg, t_env *env);
+int		ft_print_c(t_env *env);
+int		ft_print_char_c(char arg, t_env *env);
 int		istype_d(va_list ap);
 int		istype_s(va_list ap);
 int		intlen(int nb);
