@@ -6,13 +6,13 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 13:15:30 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/11 14:12:33 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 12:48:20 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			ft_size_options(char *s, t_env *env);
+static int			ft_size_options(char *s, t_env *env);
 {
 	int		i;
 
@@ -38,7 +38,7 @@ int			ft_size_options(char *s, t_env *env);
 	return (i);
 }
 
-int			ft_precision(char *s, t_env *env);
+static int			ft_precision(char *s, t_env *env);
 {
 	int		i;
 
@@ -60,7 +60,7 @@ int			ft_precision(char *s, t_env *env);
 	return (i--);
 }
 
-int			ft_width(char *s, t_env *env)
+static int			ft_width(char *s, t_env *env)
 {
 	int		i;
 
@@ -83,7 +83,7 @@ int			ft_width(char *s, t_env *env)
 	return (i - 1);
 }
 
-void		ft_options(char c, t_env *env)
+static void		ft_options(char c, t_env *env)
 {
 	if (c == '-')
 		env->minus = 1;

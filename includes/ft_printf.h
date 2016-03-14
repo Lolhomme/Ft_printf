@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 12:29:04 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 12:48:47 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,13 @@ typedef struct				s_tab
 
 int		ft_printf(const char *format, ...);
 int		ft_wichflags(char *format);
-void	ft_options(char c, t_env *env);
-int		ft_width(char *s, t_env *env);
-int		ft_precision(char *s, , t_env *env);
-int		ft_size_options(char *s, t_env *env);
 int		ft_percent(va_list ap, t_env *env);
 int		istype_c(va_list ap, t_env *env);
 void	ft_conv_unicode(wchar_t arg, t_env *env);
 int		ft_print_c(t_env *env);
 int		ft_print_char_c(char arg, t_env *env);
-int		istype_d(va_list ap);
-int		istype_s(va_list ap);
-int		intlen(int nb);
+//int		istype_d(va_list ap);
+//int		istype_s(va_list ap);
+//int		intlen(int nb);
 
 #endif
