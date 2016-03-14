@@ -6,14 +6,14 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 16:13:22 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 17:15:38 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft.h"
+# include "../Libft/includes/libft.h"
 # include "ft_printf.h"
 # include <stdarg.h>
 # include <unistd.h>
