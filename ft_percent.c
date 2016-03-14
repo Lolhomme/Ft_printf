@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 16:15:13 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 11:55:16 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 12:38:08 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int			ft_minus(int size, char c)
 {
 	int		i;
-	
+
 	i = 0;
 	ft_putchar(c);
 	while (i < (size - 1))
@@ -54,7 +54,7 @@ static int			ft_space(int size, char c)
 	return (i + 1);
 }
 
-int			ft_percent(va_list ap, t_env *env)
+int					ft_percent(va_list ap, t_env *env)
 {
 	int		i;
 

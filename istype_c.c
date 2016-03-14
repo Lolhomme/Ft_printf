@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 17:19:12 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/13 15:52:54 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 12:30:38 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static char			ft_uchar(va_list ap)
 	return (arg2);
 }
 
-int			istype_c(va_list ap, t_env *env)
+int					istype_c(va_list ap, t_env *env)
 {
 	char	arg;
 	int		i;
