@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 12:15:54 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/14 12:29:04 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ typedef struct				s_tab
 }							t_tab
 
 int		ft_printf(const char *format, ...);
-//int		ft_whichtype(char *format);
 int		ft_wichflags(char *format);
 void	ft_options(char c, t_env *env);
 int		ft_width(char *s, t_env *env);
