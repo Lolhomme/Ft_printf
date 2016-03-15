@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 11:52:35 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/15 12:00:51 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/15 15:20:02 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int						istype_d(va_list ap, t_env *env)
 	else if (env->h)
 		arg = (long long int)ft_h_signed(ap);
 	else if (env->j || env->z)
-		arg = ft_d_jz(ap, env);
+		arg = istype_d_jz(ap, env);
 	else
 	{
 		arg = va_arg(ap, int);

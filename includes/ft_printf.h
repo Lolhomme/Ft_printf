@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/15 13:32:50 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/15 17:52:43 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <wchar.h>
+# include <limits.h>
 
 typedef struct				s_env
 {
@@ -57,11 +58,20 @@ int		istype_c(va_list ap, t_env *env);
 void	ft_conv_unicode(wchar_t arg, t_env *env);
 int		ft_print_c(t_env *env);
 int		ft_print_char_c(char arg, t_env *env);
+long long int		istype_d_jz(va_list ap, t_env *env);
 int		istype_d(va_list ap, t_env *env);
 int		ft_print_signed_number(long long int arg, t_env *env);
 int		intlen(long long int nb);
+void	ft_putnbr_ll(long long int nb)
 int		istype_s(va_list ap, t_env *env);
 int		ft_print_string(char *arg, t_env *env);
 int		ft_print_s(t_env *env);
+int		istype_o(va_list ap, t_env *env);
+int		ft_print_o_unsigned_number(char *arg, t_env *env);
+void	ft_putstr_n(char *s, int start, int len);
+char	*ft_conv_octal(unsigned long long int arg, t_env *env);
+char	*ft_ulltoa(unsigned long long int arg);
+int		uintlen(unsigned long long int n);
+unsigned long long int	istype_o_jz(va_list ap, t_env *env);
 
 #endif
