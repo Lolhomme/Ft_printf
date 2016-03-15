@@ -6,25 +6,25 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 12:57:21 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 18:38:01 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/15 13:23:26 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
 
-int			intlen(int nb)
+int			intlen(long long int nb)
 {
 	int		i;
-	int		ret;
 
-	i = 0;
-	ret = nb;
+	i = 1;
 	if (nb == 0)
 		return (1);
-	while (nb)
+	if (nb < 0)
+		nb = -nb;
+	while (nb > 9)
 	{
 		nb /= 10;
 		i++;
 	}
-	return ((nb < 0) ? i + 1 : i);
+	return (i);
 }
