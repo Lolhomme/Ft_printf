@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 13:14:50 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/16 15:28:18 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,11 @@ int		ft_print_signed_number(long long int arg, t_env *env);
 int		intlen(long long int nb);
 void	ft_putnbr_ll(long long int nb)
 int		istype_s(va_list ap, t_env *env);
-int		ft_print_string(char *arg, t_env *env);
+int		ft_print_char_s(char *arg, t_env *env);
 int		ft_print_s(t_env *env);
+char	*ft_cs(wchar_t arg);i
+int		ft_size_arg_null(int i; char *c, int j);
+int		ft_wchar_len(wchar_t arg);
 int		istype_o(va_list ap, t_env *env);
 int		ft_print_o_unsigned_number(char *arg, t_env *env);
 void	ft_putstr_n(char *s, int start, int len);
@@ -76,6 +79,5 @@ unsigned long long int	istype_o_jz(va_list ap, t_env *env);
 int		istype_x(va_list ap, t_env *env);
 char	*ft_conv_hexa(unsigned long long int arg, t_env *env);
 int		ft_print_unsigned_number(char *arg, t_env *env);
-
 
 #endif

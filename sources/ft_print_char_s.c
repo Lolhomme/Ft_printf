@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_string.c                                  :+:      :+:    :+:   */
+/*   ft_print_char_s.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/14 16:00:35 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 16:06:07 by alaulom          ###   ########.fr       */
+/*   Created: 2016/03/16 14:52:20 by alaulom           #+#    #+#             */
+/*   Updated: 2016/03/16 14:52:45 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ static int	ft_arg(char *arg, t_env *env, int i)
 	return (i);
 }
 
-int			ft_print_string(char *arg, t_env *env)
+int			ft_print_char_s(char *arg, t_env *env)
 {
 	int i;
 
