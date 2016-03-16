@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/15 17:52:43 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/16 13:14:50 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,5 +73,9 @@ char	*ft_conv_octal(unsigned long long int arg, t_env *env);
 char	*ft_ulltoa(unsigned long long int arg);
 int		uintlen(unsigned long long int n);
 unsigned long long int	istype_o_jz(va_list ap, t_env *env);
+int		istype_x(va_list ap, t_env *env);
+char	*ft_conv_hexa(unsigned long long int arg, t_env *env);
+int		ft_print_unsigned_number(char *arg, t_env *env);
+
 
 #endif
