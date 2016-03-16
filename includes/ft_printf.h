@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 15:38:59 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/16 16:34:33 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 typedef struct				s_env
 {
-	int						min;
+	int						minus;
 	int						plus;
 	int						sharp;
 	int						zero;
@@ -49,10 +49,11 @@ typedef struct				s_env
 typedef struct				s_tab
 {
 	int						(*tab_ft_conv[126])(va_list ap, t_env *env);
-}							t_tab
+}							t_tab;
 
 int		ft_printf(const char *format, ...);
-int		ft_wichflags(char *format);
+void	init_flags(t_env *env);
+int		ft_whichflags(char *format, t_env *env);
 int		ft_percent(va_list ap, t_env *env);
 int		istype_c(va_list ap, t_env *env);
 void	ft_conv_unicode(wchar_t arg, t_env *env);
@@ -62,13 +63,13 @@ long long int		istype_d_jz(va_list ap, t_env *env);
 int		istype_d(va_list ap, t_env *env);
 int		ft_print_signed_number(long long int arg, t_env *env);
 int		intlen(long long int nb);
-void	ft_putnbr_ll(long long int nb)
+void	ft_putnbr_ll(long long int nb);
 int		istype_s(va_list ap, t_env *env);
 int		ft_print_char_s(char *arg, t_env *env);
 int		ft_size_arg_null_s(int i, char c, int j);
 int		ft_print_s(t_env *env);
-char	*ft_cs(wchar_t arg);i
-int		ft_size_arg_null(int i; char *c, int j);
+char	*ft_cs(wchar_t arg);
+int		ft_size_arg_null(int i, char *c, int j);
 int		ft_wchar_len(wchar_t arg);
 int		istype_o(va_list ap, t_env *env);
 int		ft_print_o_unsigned_number(char *arg, t_env *env);

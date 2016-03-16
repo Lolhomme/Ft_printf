@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 16:15:13 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 12:38:08 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/16 16:33:56 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 static int			ft_minus(int size, char c)
 {
