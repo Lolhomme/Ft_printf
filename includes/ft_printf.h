@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 17:51:14 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 17:57:24 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 # define FT_PRINTF_H
 
 # include "../Libft/includes/libft.h"
-# include "ft_printf.h"
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <wchar.h>
 # include <limits.h>
+# include <stint.h>
 
 typedef struct				s_env
 {
