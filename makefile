@@ -6,7 +6,7 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/21 17:13:19 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/21 17:28:50 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,10 +37,12 @@ CC   = gcc
 
 FLAGS= -Wall -Wextra -Werror -I includes/ -I ./Libft/includes
 
+HEADER = ft_printf.h
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make -C ./Libft/ fclean && make -C ./Libft/
+	@make -C ./Libft/
 	@ar rc $(NAME) $^
 	@echo "SUCCESS"
 
