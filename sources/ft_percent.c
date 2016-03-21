@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/11 16:15:13 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 16:33:56 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/16 16:41:27 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int					ft_percent(va_list ap, t_env *env)
 		i = 1;
 		ft_putchar(env->params);
 	}
-	void (ap);
-	void (env);
+	(void)(ap);
+	(void)(env);
 	return (i);
 }

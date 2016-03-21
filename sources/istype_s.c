@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 13:57:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 16:06:28 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 15:50:43 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_l_s(va_list ap, t_env *env)
 {

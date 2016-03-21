@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 15:13:10 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 15:14:10 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/16 16:47:14 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 char	*ft_cs(wchar_t arg)
 {
