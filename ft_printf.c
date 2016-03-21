@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:29:02 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 16:46:00 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 17:47:34 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,17 +57,20 @@ int				ft_printf(const char *format, ...)
 	init_tab(&tab);
 	while (format[env.i])
 	{
-		if (format[env.i] != '%')
+		if (format[env.i] != '%' && format[env.i])
+		{
 			ft_putchar(format[env.i++]);
-		else if (format[env.i] == '%')
+			env.result++;
+		}
+		else if (format[env.i] == '%' && format[env.i + 1])
 		{
 			init_flags(&env);
 			env.i += 1 + ft_whichflags((char*)(format + env.i + 1), &env);
+			env.result += ft_conv(ap, &env, &tab);
 		}
 		else
 			return (env.result);
 		env.i++;
 	}
-	va_end(ap);
 	return (env.result);
 }

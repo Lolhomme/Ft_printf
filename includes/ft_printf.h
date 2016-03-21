@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 16:53:56 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 17:51:14 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,6 @@ int		ft_print_unsigned_number(char *arg, t_env *env);
 int		istype_u(va_list ap, t_env *env);
 char	*ft_strjoin_c(char c);
 int		ft_size_sn(long long int arg, t_env *env, int excep);
-
+int		ft_conv(va_list ap, t_env *env, t_tab *tab);
 
 #endif
