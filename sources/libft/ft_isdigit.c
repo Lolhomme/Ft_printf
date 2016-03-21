@@ -6,9 +6,11 @@
 /*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 12:45:41 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/09 13:12:55 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 19:16:04 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int			ft_isdigit(int c)
 {
