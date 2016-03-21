@@ -6,7 +6,7 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/21 17:50:09 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/21 18:15:02 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ HEADER = ft_printf.h
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make -C ./Libft/
+	@make -C ./sources/Libft/
 	@ar rc $(NAME) $^
 	@echo "SUCCESS"
 
@@ -50,11 +50,11 @@ $(NAME): $(OBJ)
 	@$(CC) -o $@ -c $< $(FLAGS)
 
 clean:
-	@make -C ./Libft/ clean
+	@make -C ./sources/Libft/ clean
 	@rm -rf $(OBJ)
 
 fclean: clean
-	@make -C ./Libft/ fclean
+	@make -C ./sources/Libft/ fclean
 	@rm -rf $(NAME)
 
 re: fclean all
