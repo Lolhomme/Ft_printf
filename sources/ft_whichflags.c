@@ -6,13 +6,13 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 13:15:30 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 12:48:20 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 15:57:32 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
-static int			ft_size_options(char *s, t_env *env);
+static int			ft_size_options(char *s, t_env *env)
 {
 	int		i;
 
@@ -34,11 +34,11 @@ static int			ft_size_options(char *s, t_env *env);
 	else if (s[i] == 'j')
 		env->j = 1;
 	else if (s[i] == 'z')
-		env-> = 1;
+		env->z = 1;
 	return (i);
 }
 
-static int			ft_precision(char *s, t_env *env);
+static int			ft_precision(char *s, t_env *env)
 {
 	int		i;
 
@@ -74,7 +74,7 @@ static int			ft_width(char *s, t_env *env)
 		}
 		while (ft_isdigit(s[i]))
 		{
-			env->size = env->size * 10 + (si[i] - '0');
+			env->size = env->size * 10 + (s[i] - '0');
 			i++;
 		}
 	}
@@ -106,7 +106,7 @@ int			ft_whichflags(char *format, t_env *env)
 				format[i] == ' ')
 			ft_options(format[i], env);
 		else if (ft_isdigit(format[i]) && env->isprecision == 0)
-			i =+ ft_width(&format[i], env);
+			i += ft_width(&format[i], env);
 		else if (format[i] == '.')
 			i += ft_precision(&format[i], env);
 		else if (format[i] == 'h' || format[i] == 'l' || format[i] == 'j'

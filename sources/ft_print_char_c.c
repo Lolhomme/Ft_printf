@@ -6,13 +6,13 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 11:57:17 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/14 12:15:03 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:10:41 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "ft_printf.h"
 
-tatic int	ft_minus(int size, char c)
+static int	ft_minus(int size, char c)
 {
 	int i;
 
@@ -60,16 +60,16 @@ int			ft_print_char_c(char arg, t_env *env)
 
 	i = 0;
 	if (env->size && !env->zero && !env->minus)
-		i = ft_space(arg, env);
+		i = ft_space(env->size, arg);
 	else if (env->size && env->zero && !env->minus)
-		i = ft_zero(arg, env);
-	else (env->size && env->minus)
-		i = ft_minus(arg, env);
+		i = ft_zero(env->size, arg);
+	else if (env->size && env->minus)
+		i = ft_minus(env->size, arg);
 	else
 	{
 		i = 1;
 		ft_putchar(arg);
 	}
-	void(env);
+	(void)env;
 	return (i);
 }

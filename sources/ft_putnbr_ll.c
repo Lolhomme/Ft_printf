@@ -6,15 +6,15 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 15:05:33 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/15 15:09:44 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:32:16 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 void			ft_putnbr_ll(long long int nb)
 {
-	if (nb > LLONG_MAX || n < LLONG_MIN)
+	if (nb > LLONG_MAX || nb < LLONG_MIN)
 		return ;
 	if (nb == LLONG_MIN)
 	{

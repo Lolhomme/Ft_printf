@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 15:55:22 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 15:50:18 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:48:56 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,13 @@ int								istype_o(va_list ap, t_env *env)
 	else if (env->h)
 		arg = (unsigned long long int)ft_h_usigned(ap);
 	else if (env->j || env->z)
-		arg = ft_ojz(ap, env);
+		arg = istype_o_jz(ap, env);
 	else
 	{
 		arg = va_arg(ap, unsigned int);
 		arg = (unsigned long long int)arg;
 	}
 	dst = ft_conv_octal(arg, env);
-	i = ft_print_unsigned_o_number(dst, env);
+	i = ft_print_o_unsigned_number(dst, env);
 	return (i);
 }

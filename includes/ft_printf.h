@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 16:34:33 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:53:56 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,10 @@ typedef struct				s_env
 	char		params;
 	char		*quest;
 	char		*world;
+	char		c;
 	int						result;
 	int						i;
+	long long int			arg;
 }							t_env;
 
 typedef struct				s_tab
@@ -82,5 +84,8 @@ int		istype_x(va_list ap, t_env *env);
 char	*ft_conv_hexa(unsigned long long int arg, t_env *env);
 int		ft_print_unsigned_number(char *arg, t_env *env);
 int		istype_u(va_list ap, t_env *env);
+char	*ft_strjoin_c(char c);
+int		ft_size_sn(long long int arg, t_env *env, int excep);
+
 
 #endif

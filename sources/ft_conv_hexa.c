@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 13:00:54 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 16:46:24 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:15:36 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static char	*ft_hexa(unsigned long long int arg, t_env *env)
 	unsigned long long int		j;
 
 	tmp = NULL;
-	i = 10;i
+	i = 10;
 	j = (env->params == 'x' || env->params == 'p') ? 'a' : 'A';
 	if (arg < 10)
 		tmp = ft_ulltoa(arg);

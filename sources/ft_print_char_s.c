@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 14:52:20 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 14:52:45 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:16:08 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_precision_null(char *arg, int j)
 {

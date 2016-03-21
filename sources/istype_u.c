@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 15:36:43 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 15:50:58 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:52:15 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int								istype_u(va_list ap, t_env *env)
 	else if (env->h)
 		arg = (unsigned long long int)ft_h_signed(ap);
 	else if (env->j || env->z)
-		arg = ft_ojz(ap, env);
+		arg = istype_o_jz(ap, env);
 	else
 		arg = (unsigned long long int)va_arg(ap, unsigned int);
 	arg2 = ft_ulltoa(arg);

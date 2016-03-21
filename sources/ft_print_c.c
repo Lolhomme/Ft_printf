@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 11:13:29 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 16:47:43 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:02:13 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int		ft_minus(int size, t_env *env)
 	i = 0;
 	j = ft_strlen(env->quest);
 	write(1, env->quest, j);
-	while (i < (size - j));
+	while (i < (size - j))
 	{
 		ft_putchar(' ');
 		i++;
@@ -28,7 +28,7 @@ static int		ft_minus(int size, t_env *env)
 	return (i + j);
 }
 
-static int		ft_zero(int size, t_env *env);
+static int		ft_zero(int size, t_env *env)
 {
 	int			i;
 	int			j;

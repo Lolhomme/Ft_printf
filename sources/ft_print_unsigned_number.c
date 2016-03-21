@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/16 13:11:47 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/16 13:13:26 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:33:14 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_size_precision(char *arg, int i, t_env *env, char c)
 {
@@ -42,11 +42,11 @@ static int	ft_size(char *arg, t_env *env, int excep)
 	else
 		c = ' ';
 	i = excep ? 0 : ft_strlen(arg);
-	if ((env->sharp || env->spec == 'p') && c == '0' && !excep)
+	if ((env->sharp || env->params == 'p') && c == '0' && !excep)
 		ft_putstr_n(arg, 0, 2);
 	j = env->precision > i ? env->precision - i : 0;
 	i = ft_size_precision(arg, i, env, c);
-	if ((env->sharp || env->spec == 'p') && c == '0' && !excep)
+	if ((env->sharp || env->params == 'p') && c == '0' && !excep)
 		ft_putstr_n(arg, 2, ft_strlen(arg));
 	else if (!excep)
 		ft_putstr(arg);

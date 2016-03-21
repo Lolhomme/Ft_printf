@@ -6,7 +6,7 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/16 16:07:56 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/21 16:31:34 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 SRC  = ft_printf.c \
 	  ./sources/ft_percent.c ./sources/istype_c.c ./sources/ft_whichflags.c \
-	  ./sources/ft_init_flags.c ./sources/ft_conv_unicode.c \
+	  ./sources/init_flags.c ./sources/ft_conv_unicode.c \
 	  ./sources/ft_print_c.c ./sources/ft_print_char_c.c \
 	  ./sources/ft_conv_hexa.c ./sources/ft_conv_octal.c \
 	  ./sources/ft_cs.c ./sources/ft_print_char_s.c \
@@ -26,7 +26,8 @@ SRC  = ft_printf.c \
 	  ./sources/ft_whichflags.c ./sources/init_flags.c ./sources/intlen.c \
 	  ./sources/istype_c.c ./sources/istype_d.c ./sources/istype_d_jz.c \
 	  ./sources/istype_o.c ./sources/istype_o_jz.c ./sources/istype_s.c \
-	  ./sources/istype_u.c ./sources/istype_x.c ./sources/uintlen.c
+	  ./sources/istype_u.c ./sources/istype_x.c ./sources/uintlen.c \
+	  ./sources/ft_strjoin_c.c ./sources/ft_size_sn.c
 
 NOM  = $(basename $(SRC))
 

@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:11:25 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/15 17:51:00 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:16:44 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 static int	ft_size_precision(t_env *env, char *arg, int i, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 13:57:05 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 15:50:43 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:51:36 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int			istype_s(va_list ap, t_env *env)
 	int		i;
 
 	i = 0;
-	if (env->l || env->spec == 'S')
+	if (env->l || env->params == 'S')
 	{
 		env->world = NULL;
 		i = ft_l_s(ap, env);
@@ -54,7 +54,7 @@ int			istype_s(va_list ap, t_env *env)
 	else
 	{
 		arg = va_arg(ap, char *);
-		i = ft_print_string(arg, env);
+		i = ft_print_char_s(arg, env);
 	}
 	return (i);
 }

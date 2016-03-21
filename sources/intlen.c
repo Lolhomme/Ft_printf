@@ -6,11 +6,11 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/23 12:57:21 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/15 13:23:26 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 16:43:34 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 int			intlen(long long int nb)
 {
