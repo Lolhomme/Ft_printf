@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/21 18:15:02 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/21 18:36:05 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,14 +35,14 @@ OBJ  = $(addsuffix .o, $(NOM))
 
 CC   = gcc
 
-FLAGS= -Wall -Wextra -Werror -I includes/ -I ./Libft/includes
+FLAGS= -Wall -Wextra -Werror -I includes/ -I ./libft/includes
 
 HEADER = ft_printf.h
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@make -C ./sources/Libft/
+	@make -C ./sources/libft/
 	@ar rc $(NAME) $^
 	@echo "SUCCESS"
 
@@ -50,11 +50,11 @@ $(NAME): $(OBJ)
 	@$(CC) -o $@ -c $< $(FLAGS)
 
 clean:
-	@make -C ./sources/Libft/ clean
+	@make -C ./sources/libft/ clean
 	@rm -rf $(OBJ)
 
 fclean: clean
-	@make -C ./sources/Libft/ fclean
+	@make -C ./sources/libft/ fclean
 	@rm -rf $(NAME)
 
 re: fclean all
