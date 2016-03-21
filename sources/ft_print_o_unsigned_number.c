@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:11:25 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 16:16:44 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/21 19:23:13 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ static int	ft_minus(char *arg, t_env *env, int excep)
 	return (i);
 }
 
-int			ft_print_unsigned_o_number(char *arg, t_env *env)
+int			ft_print_o_unsigned_number(char *arg, t_env *env)
 {
 	int i;
 	int excep;
