@@ -6,7 +6,7 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/21 16:31:34 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/21 17:13:19 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C ./Libft/ fclean && make -C ./Libft/
-	ar -rsc $(NAME) $^
+	@ar rc $(NAME) $^
 	@echo "SUCCESS"
 
 %.o: %.c
