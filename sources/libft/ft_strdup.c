@@ -6,11 +6,11 @@
 /*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 14:23:20 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 15:00:17 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/22 13:59:44 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s1)

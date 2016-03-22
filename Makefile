@@ -6,7 +6,7 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/21 18:36:05 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/22 14:12:26 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,13 @@ SRC  = ft_printf.c \
 	  ./sources/istype_c.c ./sources/istype_d.c ./sources/istype_d_jz.c \
 	  ./sources/istype_o.c ./sources/istype_o_jz.c ./sources/istype_s.c \
 	  ./sources/istype_u.c ./sources/istype_x.c ./sources/uintlen.c \
-	  ./sources/ft_strjoin_c.c ./sources/ft_size_sn.c ./sources/ft_conv.c
+	  ./sources/ft_strjoin_c.c ./sources/ft_size_sn.c ./sources/ft_conv.c \
+	  ./sources/libft/ft_isdigit.c ./sources/libft/ft_putchar.c \
+	  ./sources/libft/ft_putstr.c ./sources/libft/ft_strcat.c \
+	  ./sources/libft/ft_strcmp.c ./sources/libft/ft_strdup.c \
+	  ./sources/libft/ft_strjoin.c ./sources/libft/ft_strlen.c \
+	  ./sources/libft/ft_strnew.c ./sources/libft/ft_strsub.c \
+	  ./sources/libft/ft_strcpy.c
 
 NOM  = $(basename $(SRC))
 

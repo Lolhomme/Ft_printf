@@ -6,10 +6,11 @@
 /*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 14:40:25 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/17 15:47:20 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/22 14:11:12 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "includes/libft.h"
 #include <unistd.h>
 
 void		ft_putchar(char c)

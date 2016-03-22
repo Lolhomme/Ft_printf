@@ -6,11 +6,11 @@
 /*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 17:00:24 by alaulom           #+#    #+#             */
-/*   Updated: 2015/01/11 16:21:13 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/22 14:09:50 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char		*ft_strjoin(const char *s1, const char *s2)
 {

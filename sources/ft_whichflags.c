@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 13:15:30 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 15:57:32 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/22 13:28:42 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,13 @@ static int			ft_precision(char *s, t_env *env)
 		i++;
 	while (s[i])
 	{
-		if (ft_isdigit(s[i]) && s[i])
+		if (ft_isdigit(s[i]))
 		{
-			env->precision = env->precision * 10 + (s[i] - '0');
-			i++;
+			while (ft_isdigit(s[i])	&& s[i])
+			{
+				env->precision = env->precision * 10 + (s[i] - '0');
+				i++;
+			}
 		}
 		else
 			env->precision = 0;

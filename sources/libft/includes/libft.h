@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 16:19:07 by alaulom           #+#    #+#             */
-/*   Updated: 2015/02/04 16:19:26 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/22 13:57:08 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # define BUFF_SIZE 8
 
-# include "libft.h"
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>

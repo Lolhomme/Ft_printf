@@ -6,11 +6,11 @@
 /*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 13:06:59 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/17 14:39:55 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/22 14:10:16 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 char		*ft_strnew(size_t size)
 {
