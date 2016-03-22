@@ -1,19 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/05 15:08:45 by kdezaphi          #+#    #+#             */
-/*   Updated: 2014/11/11 15:05:02 by agauci-d         ###   ########.fr       */
+/*   Created: 2014/11/25 18:09:07 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/04 20:21:18 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+/*
+** Ajoute l'element new_elem en fin de liste.
+*/
+
+void ft_lstaddend(t_list **alst, t_list *new_elem)
 {
-	write(fd, &c, 1);
+	t_list	*cpy;
+
+	if (!alst && !*alst)
+	{
+		ft_putendl("error ft_lstdaddend()");
+		return ;
+	}
+	if (*alst == NULL)
+		*alst = new_elem;
+	else if (alst && new_elem)
+	{
+		cpy = *alst;
+		while (cpy->next != NULL)
+			cpy = cpy->next;
+		cpy->next = new_elem;
+	}
 }

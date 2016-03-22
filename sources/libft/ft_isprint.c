@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/09 15:43:14 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/09 16:09:58 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/05 16:30:52 by agauci-d          #+#    #+#             */
+/*   Updated: 2014/11/05 20:26:58 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isprint(int c)
+#include "libft.h"
+
+int ft_isprint(int c)
 {
-	return (c >= 040 && c <= 0176);
+	if (c >= 32 && c <= '~')
+		return (1);
+	else
+		return (0);
 }

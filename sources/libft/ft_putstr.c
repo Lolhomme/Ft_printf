@@ -3,17 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/10 14:56:11 by alaulom           #+#    #+#             */
-/*   Updated: 2016/02/23 14:59:40 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/03 14:42:01 by agauci-d          #+#    #+#             */
+/*   Updated: 2016/03/22 17:23:34 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "includes/libft.h"
 
-void		ft_putstr(const char *s)
+void ft_putstr(char const *s)
 {
-	while (*s)
-		write(1, s++, 1);
+	int i;
+
+	i = 0;
+	if (!s)
+	{
+		ft_putstr("(null)");
+		return ;
+	}
+	while (s[i] != '\0')
+	{
+		ft_putchar(s[i]);
+		i++;
+	}
 }

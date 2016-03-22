@@ -3,21 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/11 16:54:52 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/11 17:00:55 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/08 17:12:57 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/14 13:02:36 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_striteri(char *s, void (*f)(unsigned int, char *))
+#include "libft.h"
+
+/*
+** Applique la fonction f a chaque caractere de la chaine de caracteres
+** passee en parametre en precisant son index en premier argument. Chaque
+** caractere est passe par adresse a la fonction f afin de pouvoir etre
+** modifie si necessaire.
+*/
+
+void ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
+	size_t			len;
 
-	if (s && f)
+	i = 0;
+	len = ft_strlen(s);
+	if (s == NULL || f == NULL)
+		return ;
+	while (i < len)
 	{
-		i = 0;
-		while (*s)
-			(*f)(i++, s++);
+		f(i, &s[i]);
+		i++;
 	}
 }

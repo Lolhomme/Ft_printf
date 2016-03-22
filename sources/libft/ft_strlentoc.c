@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strlentoc.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/05 15:08:45 by kdezaphi          #+#    #+#             */
-/*   Updated: 2014/11/11 15:05:02 by agauci-d         ###   ########.fr       */
+/*   Created: 2014/11/11 11:30:03 by agauci-d          #+#    #+#             */
+/*   Updated: 2014/11/11 11:30:57 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+/*
+** Description:
+** calcul la longueur de la chaine src jusqu'au caratere passe en parametre.
+** param.
+** #1 la chaine src.
+** #2 le caractere d'arret.
+** retour : la taille de src jusqu'au caractere c;
+*/
+
+size_t ft_strlentoc(const char *src, char c)
 {
-	write(fd, &c, 1);
+	size_t	i;
+	size_t	len;
+
+	i = 0;
+	len = ft_strlen(src) + 1;
+	while (src[i] != c && i < len)
+		i++;
+	return (i);
 }

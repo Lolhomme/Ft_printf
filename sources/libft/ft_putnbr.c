@@ -3,27 +3,92 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/10 18:42:52 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/10 18:43:01 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/03 14:47:43 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/02/23 17:24:38 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putnbr(int nb)
+static int		ft_isint(int n)
 {
-	if (nb < 0)
+	int		sign;
+	char	*nbr;
+
+	sign = 1;
+	if (n < 0)
+	{
+		n = -n;
+		sign = -1;
+	}
+	nbr = ft_itoa(n);
+	if (nbr[0] > '2' && nbr[1] > '1' && nbr[2] > '4' && nbr[3] > '7' &&
+			nbr[4] > '4' && nbr[5] > '8' && nbr[6] > '3' && nbr[7] > '6'
+			&& nbr[8] > '4')
+		return (0);
+	if (nbr[9] > '8')
+	{
+		if (nbr[9] > 7 && sign == 1)
+			return (0);
+		return (0);
+	}
+	return (1);
+}
+
+static int		ft_intleng(int n)
+{
+	int i;
+	int flag;
+	int save;
+
+	i = 1;
+	flag = 1;
+	save = n;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		n = -1 * n;
+		flag = -1;
+	}
+	while (n > 9)
+	{
+		n = n / 10;
+		i++;
+	}
+	if (i > 11)
+		return (0);
+	if (i == 11)
+		return (ft_isint(save * flag));
+	return (i);
+}
+
+void			ft_putnbr(int n)
+{
+	if (n == -2147483648)
+	{
+		ft_putstr("-2147483648");
+		return ;
+	}
+	if (ft_intleng(n) == 0)
+		return ;
+	if (n == 0)
+	{
+		ft_putchar('0');
+		return ;
+	}
+	if (n < 0)
 	{
 		ft_putchar('-');
-		ft_putnbr(-nb);
+		n = -n;
 	}
-	else if (nb < 10)
-		ft_putchar(nb + '0');
-	else
+	if (n >= 10)
 	{
-		ft_putnbr(nb / 10);
-		ft_putchar(nb % 10 + '0');
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
 	}
+	else if (n <= 9)
+		ft_putchar(n + '0');
 }

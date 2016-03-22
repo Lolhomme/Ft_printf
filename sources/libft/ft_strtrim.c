@@ -3,38 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/13 14:39:30 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/13 15:11:23 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/08 18:42:35 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/14 13:19:50 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static	unsigned int		ft_sp(char c)
+/*
+** Alloue (avec malloc(3)) et retourne une copie de la chaine passee en
+** parametre sans les espaces blancs au debut et a la fin de cette chaine.
+** On considere comme espaces blancs les caracteres ' ', '\n' et '\t'. Si s
+** ne contient pas d'espaces blancs au debut ou a la fin, la fonction renvoie
+** une copie de s. Si l'allocation echoue, la fonction renvoie NULL.
+*/
+
+char *ft_strtrim(char const *s)
 {
-	return (c == ' ' || c == '\t' || c == '\n');
-}
+	unsigned int	i;
+	size_t			j;
+	int				k;
+	char			*dst;
 
-char						*ft_strtrim(const char *s)
-{
-	char					*dst;
-	size_t					i;
-	size_t					e;
-
+	i = 0;
+	k = 0;
+	j = ft_strlen(s) - 1;
 	if (!s)
 		return (NULL);
-	i = 0;
-	while (ft_sp(*s++))
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	s -= i + 1;
-	e = ft_strlen(s) - 1;
-	if (!*s || e == i - 1)
-		return (dst = ft_strnew(1));
-	if (i != (e + 1))
-		while (ft_sp(s[e]))
-			e--;
-	dst = ft_strsub(s, i, (e - i + 1));
+	if (s[i] == '\0')
+		return ("");
+	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+		j--;
+	dst = (char *)malloc(sizeof(char) * (i + (j - i) + 1));
+	while (i <= j)
+	{
+		dst[k] = s[i];
+		i++;
+		k++;
+	}
+	dst[k] = '\0';
 	return (dst);
 }

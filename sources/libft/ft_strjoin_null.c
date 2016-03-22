@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin_null.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/08 17:56:05 by agauci-d          #+#    #+#             */
-/*   Updated: 2016/03/22 17:24:39 by alaulom          ###   ########.fr       */
+/*   Created: 2015/02/20 16:23:51 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/02/20 16:31:44 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 /*
 ** Alloue (avec malloc(3)) et retourne une chaine de caracteres fraiche
 ** terminee par un '\0' resultant de la concatenation de s1 et s2. Si
 ** l'allocation echoue, la fonction renvoie NULL.
+** Si s1 est null, s2 est renvoye.
 */
 
 char *ft_strjoin(char const *s1, char const *s2)
@@ -27,16 +28,17 @@ char *ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	if (!s1 || !s2)
-		return (NULL);
+	if (!s2 && s1)
+		return (s1);
 	dst = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!dst)
 		return (NULL);
-	while (s1[i] != '\0')
-	{
+	if (!s1 && s2)
+		return ((dst = s2));
+	else if (!s1 && !s2)
+		return (NULL);
+	while (s1[i++] != '\0')
 		dst[i] = s1[i];
-		i++;
-	}
 	while (s2[j] != '\0')
 	{
 		dst[i] = s2[j];

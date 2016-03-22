@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstdbldel.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/25 17:38:13 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:35:03 by agauci-d         ###   ########.fr       */
+/*   Created: 2014/11/26 15:13:05 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/14 13:28:24 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 /*
 ** Description
+** Pour une liste doublement chainee.
 ** Prend en parametre l'adresse d'un pointeur sur un maillon et libere
 ** la memoire de ce maillon et celle de tous ses successeurs l'un
 ** apres l'autre avec del et free(3). Pour terminer, le pointeur sur
@@ -26,28 +27,18 @@
 ** free(3)
 */
 
-void ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void ft_lstdbldel(t_listdbl **alst, void (*del)(void *, size_t))
 {
-	t_list	*ptr;
+	t_listdbl	*ptr;
 
-	if (alst && *alst && del)
+	if (alst && *alst)
 	{
 		ptr = *alst;
-		while (ptr->next != NULL)
+		ft_lstdbldelone(alst, del);
+		if (ptr->next != NULL)
 		{
-			if (ptr->content != NULL)
-				del(ptr->content, ptr->content_size);
-			ptr = ptr->next;
+			ft_lstdbldel(&ptr->prev, del);
+			ft_lstdbldel(&ptr->next, del);
 		}
-		if (ptr->content != NULL)
-			del(ptr->content, ptr->content_size);
-		ptr = *alst;
-		while (ptr->next != NULL)
-		{
-			free(ptr);
-			ptr = ptr->next;
-		}
-		free(ptr);
-		*alst = NULL;
 	}
 }

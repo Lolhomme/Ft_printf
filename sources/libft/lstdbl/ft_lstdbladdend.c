@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstdbladdend.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 15:27:42 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/11 15:04:10 by agauci-d         ###   ########.fr       */
+/*   Created: 2014/11/26 12:48:33 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/14 13:16:01 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+/*
+** Pour une liste doubement chainee.
+** Ajoute l element new_elem en fin de liste.
+*/
+
+void ft_lstdbladdend(t_listdbl **alist, t_listdbl **zlist, t_listdbl *new_elem)
 {
-	size_t			i;
-	unsigned char	*a;
-	unsigned char	*b;
-	unsigned char	*c;
+	t_listdbl	*cpy;
 
-	a = (unsigned char *)src;
-	c = (unsigned char *)dst;
-	b = (unsigned char *)malloc(sizeof(unsigned char) * len);
-	i = 0;
-	while (i < len)
+	if (!alist && !*alist)
 	{
-		b[i] = a[i];
-		i++;
+		ft_putstr("error ft_lstdbladdend() ");
+		return ;
 	}
-	i = 0;
-	while (i < len)
+	if (alist && *alist && new_elem)
 	{
-		c[i] = b[i];
-		i++;
+		cpy = *alist;
+		while (cpy->next != NULL)
+			cpy = cpy->next;
+		new_elem->prev = cpy;
+		cpy->next = new_elem;
+		*zlist = new_elem;
 	}
-	free(b);
-	return (dst);
 }

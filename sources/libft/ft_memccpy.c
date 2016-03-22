@@ -3,28 +3,43 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/08 11:36:23 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/14 12:32:14 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/06 17:43:27 by agauci-d          #+#    #+#             */
+/*   Updated: 2014/11/28 17:32:04 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void					*ft_memccpy(void *dst, const void *src, int c, size_t n)
-{
-	unsigned char			*ptrdst;
-	unsigned char			*ptrsrc;
-	unsigned char			cara;
+/*
+** DESCRIPTION
+** The memccpy() function copies bytes from string src to string dst.
+** If the character c (as converted to an unsigned char) occurs in the
+** string src, the copy stops and a pointer to the byte after the copy of
+** c in the string dst is returned. Otherwise, n bytes are copied, and
+** a NULL pointer is returned. The source and destination strings should
+** not overlap, as the behavior is undefined.)
+*/
 
-	if (!src || !dst)
-		return (NULL);
-	ptrdst = (unsigned char *)dst;
-	ptrsrc = (unsigned char *)src;
-	cara = (unsigned char)c;
-	while (n--)
-		if ((*ptrdst++ = *ptrsrc++) == cara)
-			return (ptrdst);
+void *ft_memccpy(void *dst, const void *src, int c, size_t n)
+{
+	size_t			i;
+	unsigned char	*a;
+	unsigned char	*b;
+
+	a = (unsigned char *)src;
+	b = (unsigned char *)dst;
+	i = 0;
+	while (i < n)
+	{
+		if (a[i] == (unsigned char)c)
+		{
+			b[i] = a[i];
+			return ((void *)&b[i + 1]);
+		}
+		b[i] = a[i];
+		i++;
+	}
 	return (NULL);
 }

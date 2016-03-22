@@ -3,23 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 14:04:42 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/17 10:56:37 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/03 17:52:55 by agauci-d          #+#    #+#             */
+/*   Updated: 2016/03/22 17:26:11 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, const char *src)
-{
-	int	a;
+#include "includes/libft.h"
 
-	a = 0;
-	while (src[a])
+/*
+** The strcpy() function copy the string src to dst (including the terminating
+**`\0' character).
+*/
+
+char *ft_strcpy(char *dst, const char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
 	{
-		dst[a] = src[a];
-		a++;
+		dst[i] = src[i];
+		i++;
 	}
-	dst[a] = 0;
+	dst[i] = '\0';
 	return (dst);
 }

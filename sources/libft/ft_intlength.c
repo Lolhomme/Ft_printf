@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_intlengh.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlevy <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/19 15:14:29 by dlevy             #+#    #+#             */
-/*   Updated: 2015/02/04 16:14:26 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/10 12:44:58 by agauci-d          #+#    #+#             */
+/*   Updated: 2014/11/25 18:56:15 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **alst, t_list *new)
-{
-	t_list	*tmp;
+/*
+** Calcul la longueur d'un int. Et retourne cette valeur.
+*/
 
-	tmp = *alst;
-	if (!(*alst))
-		*alst = new;
-	else
+int ft_intlength(int n)
+{
+	int i;
+
+	i = 1;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		n = -n;
+	while (n > 9)
 	{
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = new;
+		n = n / 10;
+		i++;
 	}
+	if (i > 11)
+		return (0);
+	return (i);
 }

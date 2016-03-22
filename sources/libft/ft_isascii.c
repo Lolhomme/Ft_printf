@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/09 15:12:29 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/09 15:16:49 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/05 16:20:03 by agauci-d          #+#    #+#             */
+/*   Updated: 2014/11/05 21:39:19 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isascii(int c)
+#include "libft.h"
+
+int ft_isascii(int c)
 {
-	return (c >= 0 && c <= 127);
+	if (c >= '\0' && c <= 127)
+		return (1);
+	else
+		return (0);
 }

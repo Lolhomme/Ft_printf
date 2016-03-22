@@ -3,35 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/12 10:57:24 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/12 11:34:06 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/10 11:26:34 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/14 13:22:35 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char				*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+/*
+** Applique la fonction f a chaque caractere de la chaine de caracteres
+** passee en parametre en precisant son index pour creer une nouvelle
+** chaine fraiche (avec malloc(3)) resultant des applications
+** successives de f.
+*/
+
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*str;
-	unsigned int	i;
-	size_t			l;
+	size_t			i;
+	unsigned int	index;
+	size_t			len;
+	char			*dst;
 
-	if (s && f)
+	i = 0;
+	index = 0;
+	len = ft_strlen(s);
+	dst = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s || !f)
+		return (NULL);
+	while (i < len)
 	{
-		l = ft_strlen(s);
-		str = (char *)malloc(sizeof(char) * (l + 1));
-		if (!str)
-			return (NULL);
-		i = 0;
-		while (i < l)
-		{
-			str[i] = (*f)(i, *s++);
-			i++;
-		}
-		str[i] = 0;
-		return (str);
+		dst[i] = f(index, s[i]);
+		i++;
+		index++;
 	}
-	return (NULL);
+	dst[i] = '\0';
+	return (dst);
 }

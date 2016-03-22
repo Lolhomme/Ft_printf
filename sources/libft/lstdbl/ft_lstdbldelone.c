@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstdbldelone.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/25 17:25:31 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:33:21 by agauci-d         ###   ########.fr       */
+/*   Created: 2014/11/27 11:10:55 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/14 13:30:32 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 /*
 ** Descripition
+** Pour une liste doublement chainee.
 ** Prend en parametre l'adresse d'un pointeur sur un maillon et libere
 ** la memoire du contenu de ce maillon avec la fonction del passee en
 ** parametre puis libere la memoire du maillon en lui meme avec free(3).
@@ -28,17 +29,16 @@
 ** free(3)
 */
 
-void ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+void ft_lstdbldelone(t_listdbl **alst, void (*del)(void *, size_t))
 {
-	t_list		*tmp;
+	t_listdbl		*delone;
 
-	if (alst && *alst && del)
+	if (alst && *alst)
 	{
-		tmp = *alst;
-		if (tmp->content != NULL)
-			del(tmp->content, tmp->content_size);
-		if (tmp != NULL)
-			free(tmp);
-		*alst = NULL;
+		delone = *alst;
+		delone->content = NULL;
+		delone->content_size = 0;
+		del(delone->content, delone->content_size);
+		ft_memdel((void **)alst);
 	}
 }

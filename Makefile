@@ -6,7 +6,7 @@
 #    By: alaulom <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/23 13:06:15 by alaulom           #+#    #+#              #
-#    Updated: 2016/03/22 14:12:26 by alaulom          ###   ########.fr        #
+#    Updated: 2016/03/22 15:33:25 by alaulom          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC  = ft_printf.c \
 	  ./sources/istype_o.c ./sources/istype_o_jz.c ./sources/istype_s.c \
 	  ./sources/istype_u.c ./sources/istype_x.c ./sources/uintlen.c \
 	  ./sources/ft_strjoin_c.c ./sources/ft_size_sn.c ./sources/ft_conv.c \
+	  ./sources/init_tab.c \
 	  ./sources/libft/ft_isdigit.c ./sources/libft/ft_putchar.c \
 	  ./sources/libft/ft_putstr.c ./sources/libft/ft_strcat.c \
 	  ./sources/libft/ft_strcmp.c ./sources/libft/ft_strdup.c \

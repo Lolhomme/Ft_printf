@@ -3,43 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/07 14:15:44 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/12 13:41:56 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/04 13:53:19 by agauci-d          #+#    #+#             */
+/*   Updated: 2014/11/11 19:20:15 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		scan(char *str, const char *to_find)
+/*
+** The strstr() function locates the first occurrence of the null-terminated
+** string s2 in the null-terminated string s1.
+** If s2 is an empty string, s1 is returned; if s2 occurs nowhere in s1, NULL is
+** returned; otherwise a pointer to the first character of the first occurrence
+** of s2 is returned.
+*/
+
+char *ft_strstr(const char *s1, const char *s2)
 {
-	int			i;
+	int		i;
+	int		h;
+	char	*a;
 
 	i = 0;
-	while (to_find[i])
+	h = 0;
+	a = (char *)s1;
+	if (!s1)
+		return (NULL);
+	if (*s2 == '\0')
+		return (a);
+	while (s1[i] != '\0')
 	{
-		if (str[i] != to_find[i])
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-char			*ft_strstr(const char *str, const char *to_find)
-{
-	int			i;
-	char		*ptrstr;
-
-	ptrstr = (char *)str;
-	if (!*to_find)
-		return (ptrstr);
-	i = 0;
-	while (ptrstr[i])
-	{
-		if (ptrstr[i] == to_find[0])
-			if (scan(&ptrstr[i], to_find))
-				return (&ptrstr[i]);
+		if (s1[i] == *s2)
+		{
+			h = ft_strncmp(&s1[i], s2, ft_strlen(s2));
+			if (h == 0)
+				return (&a[i]);
+		}
 		i++;
 	}
 	return (NULL);

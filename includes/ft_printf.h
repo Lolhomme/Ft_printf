@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/19 15:28:28 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 18:34:28 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/22 15:32:04 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ typedef struct				s_tab
 
 int		ft_printf(const char *format, ...);
 void	init_flags(t_env *env);
+void	init_tab(t_tab *tab);
 int		ft_whichflags(char *format, t_env *env);
 int		ft_percent(va_list ap, t_env *env);
 int		istype_c(va_list ap, t_env *env);

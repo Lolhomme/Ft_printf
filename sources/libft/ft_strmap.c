@@ -3,34 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alaulom <anthonylaulom@gmail.com>          +#+  +:+       +#+        */
+/*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/11 17:38:54 by alaulom           #+#    #+#             */
-/*   Updated: 2014/11/11 18:12:34 by alaulom          ###   ########.fr       */
+/*   Created: 2014/11/09 16:26:53 by agauci-d          #+#    #+#             */
+/*   Updated: 2015/01/14 13:22:21 by agauci-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-char		*ft_strmap(const char *s, char (*f)(char))
+/*
+** Applique la fonction f a chaque caractere de la chaine de caracteres
+** passee en parametre pour creer une nouvelle chaine fraiche
+** (avec malloc(3)) resultant des applications successives de f.
+*/
+
+char *ft_strmap(char const *s, char (*f)(char))
 {
-	char	*str;
-	char	*ret;
+	size_t	i;
+	size_t	len;
+	char	*dst;
 
-	if (s && f)
+	i = 0;
+	len = ft_strlen(s);
+	dst = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s || !f)
+		return (NULL);
+	while (i < len)
 	{
-		str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
-		if (!str)
-			return (NULL);
-		ret = str;
-		while (*s)
-		{
-			*str = (*f)(*s);
-			str++;
-			s++;
-		}
-		*str = 0;
-		return (ret);
+		dst[i] = f(s[i]);
+		i++;
 	}
-	return (NULL);
+	dst[i] = '\0';
+	return (dst);
 }
