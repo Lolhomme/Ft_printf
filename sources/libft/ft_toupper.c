@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 16:38:12 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/05 16:41:13 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:07:47 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int			ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);

@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 17:29:02 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/22 15:41:02 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 12:40:37 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@ static void			init_env(t_env *env)
 	env->i = 0;
 }
 
-int				ft_printf(const char *format, ...)
+int					ft_printf(const char *format, ...)
 {
 	va_list		ap;
 	t_env		env;
 	t_tab		tab;
-
 
 	va_start(ap, format);
 	init_env(&env);

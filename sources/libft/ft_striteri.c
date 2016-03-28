@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 17:12:57 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:02:36 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:02:50 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** modifie si necessaire.
 */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void		ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 	size_t			len;

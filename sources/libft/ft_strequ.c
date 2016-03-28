@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 17:49:09 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/09 19:46:52 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:02:14 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strequ(char const *s1, char const *s2)
+int			ft_strequ(char const *s1, char const *s2)
 {
 	int egal;
 

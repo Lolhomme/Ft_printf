@@ -6,13 +6,13 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/22 15:18:22 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/22 15:28:27 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 12:45:23 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void			init_tab_conv(t_tab *tab)
+void		init_tab_conv(t_tab *tab)
 {
 	int			i;
 

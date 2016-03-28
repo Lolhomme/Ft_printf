@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/20 16:23:51 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/02/20 16:31:44 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:03:18 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** Si s1 est null, s2 est renvoye.
 */
 
-char *ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dst;
 	int		i;

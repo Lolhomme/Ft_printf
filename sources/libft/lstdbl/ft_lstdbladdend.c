@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/26 12:48:33 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:16:01 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:12:22 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 ** Ajoute l element new_elem en fin de liste.
 */
 
-void ft_lstdbladdend(t_listdbl **alist, t_listdbl **zlist, t_listdbl *new_elem)
+void	ft_lstdbladdend(t_listdbl **alist, t_listdbl **zlist,
+		t_listdbl *new_elem)
 {
 	t_listdbl	*cpy;
 

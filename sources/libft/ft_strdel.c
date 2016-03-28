@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 15:05:53 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:23:55 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:01:52 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** etre liberee avec free(3) et son pointeur mis a NULL.
 */
 
-void ft_strdel(char **as)
+void		ft_strdel(char **as)
 {
 	if (!as)
 		return ;

@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 17:52:55 by agauci-d          #+#    #+#             */
-/*   Updated: 2016/03/22 17:26:11 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 13:01:42 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **`\0' character).
 */
 
-char *ft_strcpy(char *dst, const char *src)
+char		*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 

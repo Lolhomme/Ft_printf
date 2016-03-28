@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 17:42:45 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:35:02 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:55:22 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** Le maillon a ajouter en tete de cette liste.
 */
 
-void ft_lstadd(t_list **alst, t_list *new)
+void		ft_lstadd(t_list **alst, t_list *new)
 {
 	if (alst && new)
 	{

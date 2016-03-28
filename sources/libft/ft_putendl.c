@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 18:48:00 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/03 21:42:04 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:59:30 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl(const char *s)
+void		ft_putendl(const char *s)
 {
 	ft_putstr(s);
 	ft_putchar('\n');

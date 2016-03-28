@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 13:00:33 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/07 14:20:17 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:53:31 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void		ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 	char	*a;

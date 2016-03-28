@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 16:17:26 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:01:57 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:02:27 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ** fonction f afin de pouvoir etre modifie si necessaire.
 */
 
-void ft_striter(char *s, void (*f)(char *))
+void		ft_striter(char *s, void (*f)(char *))
 {
 	size_t	i;
 	size_t	len;

@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 16:54:05 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/07 20:17:55 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:58:23 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** The memcpy() function returns the original value of dst.
 */
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void		*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t			i;
 	unsigned char	*a;

@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/03 20:42:58 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/04 17:27:51 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:07:14 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void ft_tabcharcp(char **s, char ***dst)
+void		ft_tabcharcp(char **s, char ***dst)
 {
 	int i;
 	int j;

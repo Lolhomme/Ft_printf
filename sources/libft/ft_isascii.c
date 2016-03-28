@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 16:20:03 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/05 21:39:19 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:54:32 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int		ft_isascii(int c)
 {
 	if (c >= '\0' && c <= 127)
 		return (1);

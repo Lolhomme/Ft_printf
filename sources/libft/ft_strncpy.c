@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 08:06:46 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/07 16:53:12 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:05:01 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strncpy(char *dst, const char *src, size_t n)
+char		*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	size_t i;
 

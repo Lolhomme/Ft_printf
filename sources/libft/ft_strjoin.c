@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 17:56:05 by agauci-d          #+#    #+#             */
-/*   Updated: 2016/03/22 17:24:39 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 13:03:06 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** l'allocation echoue, la fonction renvoie NULL.
 */
 
-char *ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dst;
 	int		i;

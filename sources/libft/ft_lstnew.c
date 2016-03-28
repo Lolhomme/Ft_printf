@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 17:38:12 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:00:44 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:56:53 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 ** malloc(3)
 */
 
-t_list *ft_lstnew(void const *content, size_t content_size)
+t_list		*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*elem;
 

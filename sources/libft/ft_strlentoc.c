@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 11:30:03 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/11 11:30:57 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:04:05 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** retour : la taille de src jusqu'au caractere c;
 */
 
-size_t ft_strlentoc(const char *src, char c)
+size_t		ft_strlentoc(const char *src, char c)
 {
 	size_t	i;
 	size_t	len;

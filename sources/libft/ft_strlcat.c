@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:16:00 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/11 14:56:09 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:03:35 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@
 ** prevent potential security problems in incorrect code.
 */
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t i;
 	size_t lendst;

@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 17:44:15 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:33:41 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:56:27 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** L'adresse d'une fonction a laquelle appliquer chaque maillon de la liste.
 */
 
-void ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	if (lst)
 	{

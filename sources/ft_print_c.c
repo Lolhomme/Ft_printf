@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/14 11:13:29 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 16:02:13 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 12:43:18 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,12 @@ static int		ft_space(int size, t_env *env)
 	return (i + j);
 }
 
-int			ft_print_c(t_env *env)
+int				ft_print_c(t_env *env)
 {
 	int		i;
 
 	i = 0;
-	if	(env->size && !env->zero && !env->minus && env->quest)
+	if (env->size && !env->zero && !env->minus && env->quest)
 		i = ft_space(env->size, env);
 	else if (env->size && env->zero && !env->minus && env->quest)
 		i = ft_zero(env->size, env);

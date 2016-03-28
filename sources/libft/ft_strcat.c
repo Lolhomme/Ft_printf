@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 08:40:25 by agauci-d          #+#    #+#             */
-/*   Updated: 2016/03/22 17:23:51 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 13:00:50 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char *ft_strcat(char *s1, const char *s2)
+char		*ft_strcat(char *s1, const char *s2)
 {
 	int i;
 	int j;

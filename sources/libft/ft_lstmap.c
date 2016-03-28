@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/25 17:46:13 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:34:11 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:56:40 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 ** malloc(3)
 */
 
-t_list *ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*result;
 	t_list	*tmp;

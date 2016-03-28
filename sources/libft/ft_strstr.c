@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:53:19 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/11 19:20:15 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:06:34 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** of s2 is returned.
 */
 
-char *ft_strstr(const char *s1, const char *s2)
+char		*ft_strstr(const char *s1, const char *s2)
 {
 	int		i;
 	int		h;

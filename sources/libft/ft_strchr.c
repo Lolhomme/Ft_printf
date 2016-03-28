@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:09:06 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/07 13:15:13 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:01:01 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char		*ft_strchr(const char *s, int c)
 {
 	char	*a;
 	char	b;

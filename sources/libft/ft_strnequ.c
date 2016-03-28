@@ -6,13 +6,13 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 17:53:28 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/09 19:47:28 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:05:32 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strnequ(char const *s1, char const *s2, size_t n)
+int			ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	int egal;
 

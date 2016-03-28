@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 18:27:37 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/12/30 15:30:38 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:57:46 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** if no such byte exists within n bytes.
 */
 
-void *ft_memchr(const void *s, int c, size_t n)
+void		*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*a;

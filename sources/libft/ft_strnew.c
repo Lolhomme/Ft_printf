@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 15:01:52 by agauci-d          #+#    #+#             */
-/*   Updated: 2016/03/22 17:25:31 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 13:05:43 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** '\0'. Si l'allocation echoue, la fonction renvoie NULL.
 */
 
-char *ft_strnew(size_t size)
+char		*ft_strnew(size_t size)
 {
 	size_t	i;
 	char	*a;

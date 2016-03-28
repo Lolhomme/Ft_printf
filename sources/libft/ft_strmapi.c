@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/10 11:26:34 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:22:35 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:04:30 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** successives de f.
 */
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t			i;
 	unsigned int	index;

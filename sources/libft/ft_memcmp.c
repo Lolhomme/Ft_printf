@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 13:04:49 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/03 21:47:33 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:57:59 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 ** for example).  Zero-length strings are always identical.
 */
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*a;
 	unsigned char	*b;

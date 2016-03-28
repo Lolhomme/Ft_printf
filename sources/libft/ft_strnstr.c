@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 10:48:16 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/11 19:47:37 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:05:56 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 ** first occurrence of s2 is returned.
 */
 
-char *ft_strnstr(const char *s1, const char *s2, size_t n)
+char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	int		h;

@@ -6,7 +6,7 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/26 13:15:30 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/22 13:28:42 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 12:51:32 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int			ft_size_options(char *s, t_env *env)
 	i = 0;
 	if (s[i] == 'h' && s[i + 1] != 'h')
 		env->h = 1;
-	else if	(s[i] == 'h' && s[i + 1] == 'h')
+	else if (s[i] == 'h' && s[i + 1] == 'h')
 	{
 		env->hh = 1;
 		i++;
@@ -50,7 +50,7 @@ static int			ft_precision(char *s, t_env *env)
 	{
 		if (ft_isdigit(s[i]))
 		{
-			while (ft_isdigit(s[i])	&& s[i])
+			while (ft_isdigit(s[i]) && s[i])
 			{
 				env->precision = env->precision * 10 + (s[i] - '0');
 				i++;
@@ -67,7 +67,7 @@ static int			ft_width(char *s, t_env *env)
 {
 	int		i;
 
-	i  = 0;
+	i = 0;
 	if (s[i])
 	{
 		while (s[i] == '0')
@@ -86,7 +86,7 @@ static int			ft_width(char *s, t_env *env)
 	return (i - 1);
 }
 
-static void		ft_options(char c, t_env *env)
+static void			ft_options(char c, t_env *env)
 {
 	if (c == '-')
 		env->minus = 1;
@@ -98,7 +98,7 @@ static void		ft_options(char c, t_env *env)
 		env->sharp = 1;
 }
 
-int			ft_whichflags(char *format, t_env *env)
+int					ft_whichflags(char *format, t_env *env)
 {
 	int		i;
 

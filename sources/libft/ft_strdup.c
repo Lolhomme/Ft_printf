@@ -6,14 +6,14 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 11:36:21 by agauci-d          #+#    #+#             */
-/*   Updated: 2016/03/22 17:24:23 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 13:02:02 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 #include <stdlib.h>
 
-char *ft_strdup(const char *s1)
+char		*ft_strdup(const char *s1)
 {
 	char	*s2;
 	int		i;

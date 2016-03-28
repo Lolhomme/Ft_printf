@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 18:42:35 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:19:50 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:07:02 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 ** une copie de s. Si l'allocation echoue, la fonction renvoie NULL.
 */
 
-char *ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
 	unsigned int	i;
 	size_t			j;

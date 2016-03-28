@@ -6,13 +6,13 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 16:12:31 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 16:12:49 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 12:44:42 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char *ft_strjoin_c(char c)
+char		*ft_strjoin_c(char c)
 {
 	char	*dst;
 

@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 16:26:53 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:22:21 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:04:18 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** (avec malloc(3)) resultant des applications successives de f.
 */
 
-char *ft_strmap(char const *s, char (*f)(char))
+char		*ft_strmap(char const *s, char (*f)(char))
 {
 	size_t	i;
 	size_t	len;

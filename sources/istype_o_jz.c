@@ -6,13 +6,13 @@
 /*   By: alaulom <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 16:06:22 by alaulom           #+#    #+#             */
-/*   Updated: 2016/03/21 15:50:32 by alaulom          ###   ########.fr       */
+/*   Updated: 2016/03/28 12:46:08 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-unsigned long long int istype_o_jz(va_list ap, t_env *env)
+unsigned long long int		istype_o_jz(va_list ap, t_env *env)
 {
 	unsigned long long int	arg;
 

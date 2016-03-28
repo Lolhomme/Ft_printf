@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 11:11:31 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/12/30 16:17:39 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:08:54 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int			ft_atoi(const char *str)
 	sign = (str[i] == '-' ? -1 : 1);
 	if (str[i] == '+' || str[i] == '-')
 		i++;
-	while (ft_isdigit (str[i]) && str[i] != '\0')
+	while (ft_isdigit(str[i]) && str[i] != '\0')
 	{
 		figure = (int)(str[i] - '0');
 		number = (number * 10) + figure;

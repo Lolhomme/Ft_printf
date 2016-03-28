@@ -6,7 +6,7 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/26 15:13:05 by agauci-d          #+#    #+#             */
-/*   Updated: 2015/01/14 13:28:24 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 13:11:36 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 ** free(3)
 */
 
-void ft_lstdbldel(t_listdbl **alst, void (*del)(void *, size_t))
+void	ft_lstdbldel(t_listdbl **alst, void (*del)(void *, size_t))
 {
 	t_listdbl	*ptr;
 

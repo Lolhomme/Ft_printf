@@ -6,14 +6,14 @@
 /*   By: agauci-d <agauci-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 14:49:47 by agauci-d          #+#    #+#             */
-/*   Updated: 2014/11/17 12:21:54 by agauci-d         ###   ########.fr       */
+/*   Updated: 2016/03/28 12:58:35 by alaulom          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void ft_memdel(void **ap)
+void		ft_memdel(void **ap)
 {
 	if (!*ap)
 		return ;
